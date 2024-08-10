@@ -70,7 +70,7 @@ const TodoList = () => {
                 type: "complete",
                 id: key
               } );
-            } } checked={ todos[ key ].complete } type="checkbox" name="todo" className='accent-teal-400 h-4 aspect-square' />
+            } } checked={ todo.complete } type="checkbox" name="todo" className='accent-teal-400 h-4 aspect-square' />
           </div>
         ) ) }
       </div>
