@@ -45,7 +45,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className='shadow-xl shadow-slate-300 flex flex-col gap-10 items-center w-3/5 px-10 py-5 min-h-80 max-h-[90vh] rounded-xl bg-slate-50'>
+    <div className='shadow-xl shadow-slate-300 flex flex-col gap-10 items-center w-11/12 px-10 py-5 min-h-80 max-h-[90vh] rounded-xl bg-slate-50 lg:w-3/5'>
       <div className='flex gap-4 items-center w-full'>
         <input placeholder='Write here...' className='shadow-md w-full outline-none border-none px-7 py-2 bg-slate-100' type="text" value={ inputValue } onChange={ e => setInputValue( e.target.value ) } onKeyDown={ e => { if ( e.key == "Enter" ) handleAdd(); } } />
         {/* <button

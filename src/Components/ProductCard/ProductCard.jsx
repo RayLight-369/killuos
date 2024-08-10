@@ -2,8 +2,8 @@ import React from 'react';
 
 const ProductCard = () => {
   return (
-    <div className='flex h-96 w-3/5 overflow-hidden shadow-xl bg-white'>
-      <div className='h-full w-1/2 rounded-s-lg overflow-hidden'>
+    <div className='flex flex-col items-center h-fit w-11/12 overflow-hidden shadow-xl bg-white lg:w-3/5 lg:flex-row lg:h-96'>
+      <div className='h-full w-1/2 aspect-square rounded-full overflow-hidden'>
         <img className='h-full w-full aspect-auto' src="https://hips.hearstapps.com/hmg-prod/images/sansevieria-royalty-free-image-1642793822.jpg" alt="plant" />
       </div>
       <div className='flex flex-col gap-5 w-full h-full border-y-[1.3px] border-r-[1.3px] rounded-e-lg p-8'>
