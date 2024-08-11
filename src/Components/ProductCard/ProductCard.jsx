@@ -6,7 +6,7 @@ const ProductCard = () => {
       <div className='h-full w-1/2 aspect-square rounded-full overflow-hidden lg:aspect-auto lg:rounded-none lg:rounded-s-lg'>
         <img className='h-full w-full aspect-auto' src="https://hips.hearstapps.com/hmg-prod/images/sansevieria-royalty-free-image-1642793822.jpg" alt="plant" />
       </div>
-      <div className='flex flex-col items-center gap-5 w-full h-full border-y-[1.3px] border-r-[1.3px] rounded-e-lg p-8 lg:items-start'>
+      <div className='flex flex-col items-center gap-5 w-full h-full rounded-e-lg p-8 lg:items-start lg:border-y-[1.3px] lg:border-r-[1.3px]'>
         <div className='flex flex-col gap-1 uppercase items-center lg:items-start'>
           <p className='font-sans text-3xl text-neutral-600'>Classic Plant</p>
           <p className='font-sans text-neutral-500'>Popular House Plant</p>
