@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --hero-bg: #1F1D1B;
+  --active-link-color: #FFA338;
+
+}
+
 * {
   padding: 0;
   margin: 0;
