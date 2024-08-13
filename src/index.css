@@ -2,9 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: WorkSans;
+  src: url("./Assets/Fonts/WorkSans.ttf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 600;
+  src: url("./Assets/Fonts/WorkSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 700;
+  src: url("./Assets/Fonts/WorkSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 800;
+  src: url("./Assets/Fonts/WorkSans-Bold.ttf");
+}
+
 :root {
   --hero-bg: #1F1D1B;
   --active-link-color: #FFA338;
+  --button-bg: #d16f00;
 
 }
 
