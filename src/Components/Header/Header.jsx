@@ -5,7 +5,7 @@ import { NavLinks } from '../../Utils/Constants';
 const Header = () => {
   return (
     <>
-      <header className='flex py-6 px-12 h-24 w-screen text-white absolute top-0 z-10'>
+      <header className='flex py-6 px-14 h-24 w-screen text-white absolute top-0 z-10'>
         <nav>
           <div className='flex gap-10'>
             { NavLinks.map( ( route, key ) => (
