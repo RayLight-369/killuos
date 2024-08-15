@@ -9,7 +9,11 @@ const Home = () => {
       "Front-end Web Development": {
         tags: [ "UI", "UX", "Front-end Development", "Web Development", "Web Application" ],
         desc: "Our website development service focuses on building responsive, high-quality websites tailored to your brand's needs. We ensure a seamless user experience and robust functionality, helping your business thrive online."
-      }
+      },
+      "Web Designing": {
+        tags: [ "UI", "UX", "Front-end", "Web Design", "Designing" ],
+        desc: "Our website designing service focuses on design high-quality websites' visuals tailored to your brand's needs. We ensure a good looking user interface and responsive design, helping your business thrive online."
+      },
     }
   ), [] );
 
@@ -34,7 +38,7 @@ const Home = () => {
           <h1 className='text-center text-4xl font-[800] text-[var(--button-bg)] relative'>What do we do</h1>
           <div className='flex flex-row justify-between items-center relative w-full z-20'>
             <div className='h-[60vh] w-[50vw] relative'>
-              <img src="/Imgs/dots.png" alt="" className='h-full absolute right-[300px] object-cover' />
+              {/* <img src="/Imgs/dots.png" alt="" className='h-full absolute right-[300px] object-cover' /> */ }
               <img src="/Imgs/illustration-2.svg" alt="" className='h-full absolute object-cover' />
             </div>
             <p className='w-[45vw] relative block -top-20 text-[19px] text-[#303030] leading-[160%]'>We create custom, high-performing websites that are visually appealing and user-friendly, helping your business stand out and grow online, Below are the services we provide</p>
@@ -42,7 +46,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='w-screen h-fit py-10 px-20 grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-x-16 gap-y-24'>
+      <div id='services' className='w-screen h-fit py-10 px-20 grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-x-16 gap-y-24'>
         { Object.entries( Services ).map( ( [ key, val ], i ) => (
           <ServiceCard key={ i } title={ key } description={ val.desc } tags={ val.tags } />
         ) ) }
