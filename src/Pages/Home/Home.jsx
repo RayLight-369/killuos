@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <section className=' font-[WorkSans]'>
-      <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0'>
+      <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0 md:rounded-b-[400%_100%]'>
         <div className='text-white relative w-full md:w-[40%] flex flex-col items-center md:items-start gap-7'>
           <h1 className='text-[1.55rem] text-center md:text-left md:text-[2.75rem] md:leading-[127%] font-[800]'>Your Success Story Starts with a Great <span className={ `text-[var(--active-link-color)] relative z-[12] after:content-[url(./Assets/Imgs/line.svg)] after:absolute after:scale-[.4] inline-block md:after:scale-100 after:h-9 after:overflow-hidden after:block after:top-[18px] md:after:top-6 after:left-[-49%] md:after:translate-x-0 md:after:left-0 after:z-10` }>Website</span>.</h1>
           <p className='text-center md:text-left text-[.90rem] md:text-[.95rem] text-[#F5F5F5] md:px-[4px]'>We create stunning, results-driven websites that elevate your brand and captivate your audience. Let us transform your vision into a powerful digital experience.</p>

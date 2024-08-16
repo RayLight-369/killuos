@@ -29,7 +29,7 @@
   --hero-bg: #1F1D1B;
   --active-link-color: #FFA338;
   --button-bg: #d16f00;
-
+  --bg-light: #FFE3C3;
 }
 
 * {
@@ -38,7 +38,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   overflow-x: hidden;
 }
 
