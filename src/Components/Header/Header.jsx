@@ -4,40 +4,42 @@ import { NavLinks } from '../../Utils/Constants';
 
 const Header = () => {
   const location = useLocation();
+  const pathName = location.pathname;
+
+  const handleScroll = () => {
+    const y = window.scrollY;
+    const header = document.getElementById( "header" );
+
+    if ( y > 150 || ( pathName.includes( "service" ) && y > 50 ) ) {
+      header.style.background = "#ffffffdd";
+      header.style.backdropFilter = "blur(4px)";
+      header.style.height = "4.5rem";
+
+      header.querySelectorAll( "a:not(.active-link)" ).forEach( a => {
+        a.style.color = "var(--hero-bg)";
+        a.style.fontWeight = "600";
+      } );
+
+    } else {
+      header.style.background = "none";
+      header.style.backdropFilter = "none";
+      header.style.height = "6rem";
+
+      header.querySelectorAll( "a:not(.active-link)" ).forEach( a => {
+        a.style.color = "white";
+        a.style.fontWeight = "400";
+      } );
+
+    }
+  };
 
   useEffect( () => {
 
-    const header = document.getElementById( "header" );
-
-    function handleScroll () {
-      const y = window.scrollY;
-
-      if ( y > 150 || ( location.pathname.includes( "service" ) && y > 50 ) ) {
-        header.style.background = "#ffffffdd";
-        header.style.backdropFilter = "blur(4px)";
-        header.style.height = "4.5rem";
-
-        header.querySelectorAll( "a:not(.active-link)" ).forEach( a => {
-          a.style.color = "var(--hero-bg)";
-          a.style.fontWeight = "600";
-        } );
-
-      } else {
-        header.style.background = "none";
-        header.style.backdropFilter = "none";
-        header.style.height = "6rem";
-
-        header.querySelectorAll( "a:not(.active-link)" ).forEach( a => {
-          a.style.color = "white";
-          a.style.fontWeight = "400";
-        } );
-
-      }
-    }
-
+    handleScroll();
     window.onscroll = handleScroll;
 
-  }, [ location, location.pathname ] );
+  }, [ location, location.pathname, pathName, ] );
+
 
   return (
     <>
