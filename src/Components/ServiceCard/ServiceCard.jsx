@@ -9,12 +9,12 @@ const Tag = ( { tag } ) => {
 
 };
 
-const ServiceCard = ( { title, description, tags } ) => {
+const ServiceCard = ( { title, description, tags, img } ) => {
   return (
     <div className='shadow-xl p-11 rounded-xl bg-[#FFFCF9] flex flex-col gap-9 transition-all ease-out duration-[400ms] hover:shadow-2xl hover:scale-[1.04]'>
       <div className='flex gap-4 items-center'>
         <div className='w-[70px] h-full aspect-square shadow-lg flex justify-center items-center rounded-full p-3'>
-          <img src="/Imgs/circle.svg" alt="" />
+          <img src={ img } alt="" />
         </div>
         <h1 className='text-xl font-bold text-[#272727]'>{ title }</h1>
       </div>

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { NavLinks } from '../../Utils/Constants';
 
 const Header = () => {
+  const location = useLocation();
 
   useEffect( () => {
 
@@ -11,7 +12,7 @@ const Header = () => {
     function handleScroll () {
       const y = window.scrollY;
 
-      if ( y > 150 ) {
+      if ( y > 150 || ( location.pathname.includes( "service" ) && y > 50 ) ) {
         header.style.background = "#ffffffdd";
         header.style.backdropFilter = "blur(4px)";
         header.style.height = "4.5rem";
@@ -36,7 +37,7 @@ const Header = () => {
 
     window.onscroll = handleScroll;
 
-  }, [] );
+  }, [ location, location.pathname ] );
 
   return (
     <>
@@ -48,9 +49,10 @@ const Header = () => {
                 { route.name }
               </NavLink>
             ) ) }
+            {/* <a href="/#services" className="text-white text-[13px] relative p-1 origin-left transition after:content-[''] after:absolute after:w-full after:h-[1px] after:rounded-[3px] after:bg-[var(--active-link-color)] after:bottom-[1px] after:left-0 after:origin-right after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:text-[var(--active-link-color)] hover:after:origin-left hover:after:scale-x-100">Services</a> */ }
           </div>
         </nav>
-      </header>
+      </header >
       <Outlet />
     </>
   );

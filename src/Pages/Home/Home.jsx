@@ -1,24 +1,10 @@
 import { useMemo, useState } from 'react';
 import ServiceCard from '../../Components/ServiceCard/ServiceCard';
+import { services } from '../../Utils/Constants';
 // import Styles from "./Home.module.css";
 
 const Home = () => {
   const isMobile = useMemo( () => window.innerWidth <= 768, [] );
-
-  const Services = useMemo( () => (
-    {
-      "Front-end Web Development": {
-        tags: [ "UI", "UX", "Front-end Development", "Web Development", "Web Application" ],
-        desc: "Our website development service focuses on building responsive, high-quality websites tailored to your brand's needs. We ensure a seamless user experience and robust functionality, helping your business thrive online."
-      },
-      "Web Designing": {
-        tags: [ "UI", "UX", "Front-end", "Web Design", "Designing" ],
-        desc: "Our website designing service focuses on design high-quality websites' visuals tailored to your brand's needs. We ensure a good looking user interface and responsive design, helping your business thrive online."
-      },
-    }
-  ), [] );
-
-
 
   return (
     <section className=' font-[WorkSans]'>
@@ -52,8 +38,8 @@ const Home = () => {
       </div>
 
       <div id='services' className='w-screen h-fit py-10 px-4 flex flex-col md:px-20 md:grid md:grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-x-16 gap-y-24'>
-        { Object.entries( Services ).map( ( [ key, val ], i ) => (
-          <ServiceCard key={ i } title={ key } description={ val.desc } tags={ val.tags } />
+        { Object.entries( services ).map( ( [ key, val ], i ) => (
+          <ServiceCard key={ i } title={ key } description={ val.desc } tags={ val.tags } img={ val.img } />
         ) ) }
       </div>
 
