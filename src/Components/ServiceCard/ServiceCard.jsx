@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 
@@ -10,8 +11,25 @@ const Tag = ( { tag } ) => {
 };
 
 const ServiceCard = ( { title, description, tags, img } ) => {
+
+  const variants = {
+    animate: {
+      y: 0,
+      opacity: 1
+    },
+    initial: {
+      y: -20,
+      opacity: 0
+    },
+    exit: {
+      y: 10,
+      opacity: 0
+    }
+  };
+
+
   return (
-    <div className='shadow-xl p-11 rounded-xl bg-[#FFFCF9] flex flex-col gap-9 transition-all ease-out duration-[400ms] hover:shadow-2xl hover:scale-[1.04]'>
+    <motion.div variants={ variants } className='shadow-xl p-11 rounded-xl bg-[#FFFCF9] flex flex-col gap-9 transition-all ease-out duration-[400ms] hover:shadow-2xl hover:scale-[1.04]'>
       <div className='flex gap-4 items-center'>
         <div className='w-[70px] h-full aspect-square shadow-lg flex justify-center items-center rounded-full p-3'>
           <img src={ img } alt="" />
@@ -24,7 +42,7 @@ const ServiceCard = ( { title, description, tags, img } ) => {
           <Tag key={ i } tag={ tag } />
         ) ) }
       </div>
-    </div>
+    </motion.div>
   );
 };
 

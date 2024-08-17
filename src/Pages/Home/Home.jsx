@@ -1,13 +1,30 @@
 import { useMemo, useState } from 'react';
 import ServiceCard from '../../Components/ServiceCard/ServiceCard';
 import { services } from '../../Utils/Constants';
+import { motion } from 'framer-motion';
 // import Styles from "./Home.module.css";
+
 
 const Home = () => {
   const isMobile = useMemo( () => window.innerWidth <= 768, [] );
 
+  const variants = {
+    animate: {
+      y: 0,
+      opacity: 1
+    },
+    initial: {
+      y: -10,
+      opacity: 0
+    },
+    exit: {
+      y: 10,
+      opacity: 0
+    }
+  };
+
   return (
-    <section className=' font-[WorkSans]'>
+    <motion.section className=' font-[WorkSans]' variants={ variants } initial="initial" animate="animate" exit="exit">
       <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0 md:rounded-b-[400%_100%]'>
         <div className='text-white relative w-full md:w-[40%] flex flex-col items-center md:items-start gap-7'>
           <h1 className='text-[1.55rem] text-center md:text-left md:text-[2.75rem] md:leading-[127%] font-[800]'>Your Success Story Starts with a Great <span className={ `text-[var(--active-link-color)] relative z-[12] after:content-[url(./Assets/Imgs/line.svg)] after:absolute after:scale-[.4] inline-block md:after:scale-100 after:h-9 after:overflow-hidden after:block after:top-[18px] md:after:top-6 after:left-[-49%] md:after:translate-x-0 md:after:left-0 after:z-10` }>Website</span>.</h1>
@@ -43,7 +60,7 @@ const Home = () => {
         ) ) }
       </div>
 
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Credentials } from '../../Utils/Constants';
+import { motion } from 'framer-motion';
+
+
 
 const inputClassName = "px-3 py-1 text-sm outline-none border-b-2 transition-all duration-[240ms] hover:border-b-4 focus:border-[var(--active-link-color)]";
 
@@ -47,8 +50,24 @@ const Contact = () => {
   };
 
 
+  const variants = {
+    animate: {
+      y: 0,
+      opacity: 1
+    },
+    initial: {
+      y: -10,
+      opacity: 0
+    },
+    exit: {
+      y: 10,
+      opacity: 0
+    }
+  };
+
+
   return (
-    <section id="contact" className='font-[WorkSans] w-screen h-fit text-white'>
+    <motion.section id="contact" className='font-[WorkSans] w-screen h-fit text-white' variants={ variants } initial="initial" animate="animate" exit="exit">
       <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0'>
         <div className='text-white relative md:-top-12 w-full md:w-[40%] flex flex-col items-center md:items-start gap-7'>
           <h1 className='text-[1.55rem] text-center md:text-left md:text-[2.75rem] md:leading-[127%] font-[800]'><span className={ `text-[var(--active-link-color)] relative z-[12] inline-block` }>Connect</span> with us Anytime, Anywhere.</h1>
@@ -79,9 +98,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
 export default Contact;
-;;;
