@@ -1,8 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Credentials } from '../../Utils/Constants';
 
 const inputClassName = "px-3 py-1 text-sm outline-none border-b-2 transition-all duration-[240ms] hover:border-b-4 focus:border-[var(--active-link-color)]";
 
 const Contact = () => {
+
+  const [ sender_name, setName ] = useState( "" );
+  const [ sender_email, setEmail ] = useState( "" );
+  const [ message, setMsg ] = useState( "" );
+
+  const [ sending, setSending ] = useState( false );
+
+  const handleSubmit = async () => {
+    try {
+      setSending( true );
+
+      const res = await fetch( "https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify( {
+          service_id: "default_service",
+          template_id: Credentials.template_id,
+          user_id: Credentials.user_id,
+          template_params: {
+            sender_name,
+            sender_email,
+            message
+          }
+        } )
+      } );
+
+      if ( res.ok ) {
+        console.log( 1 );
+      } else {
+        console.log( await res.json() );
+      }
+
+
+    } catch ( e ) {
+      console.log( e );
+    } finally {
+      setSending( false );
+    }
+  };
+
+
   return (
     <section id="contact" className='font-[WorkSans] w-screen h-fit text-white'>
       <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0'>
@@ -24,13 +68,13 @@ const Contact = () => {
               <h1 className='text-2xl font-bold'>Contact us</h1>
               <div className='relative w-full h-full flex flex-col gap-5'>
                 <div className='w-full flex justify-between gap-10 h-fit'>
-                  <input type="text" placeholder='Enter your Name' className={ inputClassName + " flex-1" } />
-                  <input type="text" placeholder='Enter your Email' className={ inputClassName + " flex-1" } />
+                  <input type="text" placeholder='Enter your Name' value={ sender_name } onChange={ e => setName( e.target.value ) } className={ inputClassName + " flex-1" } />
+                  <input type="text" placeholder='Enter your Email' value={ sender_email } onChange={ e => setEmail( e.target.value ) } className={ inputClassName + " flex-1" } />
                 </div>
-                <textarea type="text" placeholder='Enter Message...' className={ inputClassName + " max-h-[calc(100%-160px)_!important] min-h-[30px]" } />
+                <textarea type="text" placeholder='Enter Message...' value={ message } onChange={ e => setMsg( e.target.value ) } className={ inputClassName + " max-h-[calc(100%-160px)_!important] min-h-[30px]" } />
 
               </div>
-              <button className='absolute bottom-0 rounded w-24 px-3 py-[6px] border-none outline-none bg-[var(--button-bg)] text-white transition-all hover:scale-[1.03] hover:shadow-xl'>Send</button>
+              <button disabled={ sending } onClick={ handleSubmit } className='absolute bottom-0 rounded w-24 px-3 py-[6px] border-none outline-none bg-[var(--button-bg)] text-white transition-all hover:scale-[1.03] hover:shadow-xl'>Send</button>
             </div>
           </div>
         </div>
