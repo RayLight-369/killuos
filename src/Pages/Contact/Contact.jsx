@@ -83,10 +83,10 @@ const Contact = () => {
         <div className='relative md:-top-40 md:left-20 flex flex-col md:items-center md:flex-row'>
           <div className='md:absolute md:-left-40 md:w-[24vw] md:h-[calc(65vh-80px)] bg-[var(--hero-bg)] shadow-xl'></div>
           <div className='md:w-[65vw] md:h-[65vh] bg-white shadow-2xl flex flex-col md:flex-row md:pl-[calc(24vw-10rem+30px)] md:pr-32 md:py-[40px]'>
-            <div className='text-[var(--hero-bg)] w-screen md:w-full flex flex-col gap-8 relative p-10'>
+            <div className='text-[var(--hero-bg)] w-screen md:w-full flex flex-col gap-12 relative p-10'>
               <h1 className='text-2xl font-bold text-center md:text-left'>Contact us</h1>
-              <div className='relative w-full h-full flex flex-col gap-5'>
-                <div className='w-full flex flex-col md:flex-row justify-between gap-10 h-fit'>
+              <div className='relative w-full h-full flex flex-col gap-14 md:gap-7'>
+                <div className='w-full flex flex-col md:flex-row md:justify-between gap-14 md:gap-10 h-fit'>
                   <input type="text" placeholder='Enter your Name' value={ sender_name } onChange={ e => setName( e.target.value ) } className={ inputClassName + " flex-1" } />
                   <input type="text" placeholder='Enter your Email' value={ sender_email } onChange={ e => setEmail( e.target.value ) } className={ inputClassName + " flex-1" } />
                 </div>
