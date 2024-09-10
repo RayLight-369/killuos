@@ -89,10 +89,6 @@ const Contact = () => {
                 <Mail className='w-5' />
                 killuosdevs@gmail.com
               </a>
-              <a href="tel:+923210004114" className='flex gap-3'>
-                <Phone className='w-5' />
-                +923210004114
-              </a>
             </div>
           </div>
 
