@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <>
       <header id='header' className='flex items-center py-2 px-10 md:px-14 h-24 w-screen transition-all duration-300 text-white z-50 fixed top-0'>
-        <nav className='flex gap-12 items-center justify-between w-full'>
+        <nav className='flex gap-12 items-center justify-between md:justify-start md:gap-20 w-full'>
           <div id="logo">
             <NavLink to={ "/" }><img src="/Imgs/killogo.svg" alt="Killogo" className='h-5 md:h-6' /></NavLink>
           </div>

@@ -39,7 +39,7 @@ const Home = () => {
         ) }
       </div>
 
-      <div className='w-screen h-fit py-9 px-5 md:px-12 relative'>
+      <div className='w-screen h-fit py-9 px-5 md:px-12 relative overflow-x-hidden'>
         <div className='flex flex-col gap-2 relative border-b-2 pb-10 [border-image:linear-gradient(to_right,white,#FFD7A8,white)_1]'>
           <img src="/Imgs/question.svg" className='h-[250px] absolute left-[calc(50%+30px)] -top-3 opacity-80' alt="" />
           <img src="/Imgs/question.svg" className='h-[200px] absolute right-1/2 top-[calc(50%-20px)] opacity-85 rotate-[35deg]' alt="" />
