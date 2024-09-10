@@ -15,11 +15,12 @@ const Home = () => {
     },
     initial: {
       y: -10,
-      opacity: 0
+      opacity: 0,
     },
     exit: {
       y: 10,
-      opacity: 0
+      opacity: 0,
+      // clipPath: "polygon(52% 0, 54% 0, 53% 100%, 48% 100%)"
     }
   };
 

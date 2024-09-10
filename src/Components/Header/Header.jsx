@@ -43,9 +43,12 @@ const Header = () => {
 
   return (
     <>
-      <header id='header' className='flex items-center py-2 px-14 h-24 w-screen transition-all duration-300 text-white z-50 fixed top-0'>
-        <nav>
-          <div className='flex gap-10'>
+      <header id='header' className='flex items-center py-2 px-10 md:px-14 h-24 w-screen transition-all duration-300 text-white z-50 fixed top-0'>
+        <nav className='flex gap-12 items-center justify-between w-full'>
+          <div id="logo">
+            <NavLink to={ "/" }><img src="/Imgs/killogo.svg" alt="Killogo" className='h-5 md:h-6' /></NavLink>
+          </div>
+          <div className='flex gap-4 md:gap-10 items-center'>
             { NavLinks.map( ( route, key ) => (
               <NavLink to={ route.path } key={ key } className={ ( { isActive } ) => `${ isActive ? "active-link text-[var(--active-link-color)_!important] after:scale-x-100" : "text-white after:scale-x-0" }  text-[13px] relative p-1 origin-left transition after:content-[''] after:absolute after:w-full after:h-[1px] after:rounded-[3px] after:bg-[var(--active-link-color)] after:bottom-[1px] after:left-0 after:origin-right after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:text-[var(--active-link-color)] hover:after:origin-left hover:after:scale-x-100` }>
                 { route.name }

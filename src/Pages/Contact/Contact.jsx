@@ -61,7 +61,7 @@ const Contact = () => {
     },
     exit: {
       y: 10,
-      opacity: 0
+      opacity: 0,
     }
   };
 
