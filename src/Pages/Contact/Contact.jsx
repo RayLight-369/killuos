@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Credentials } from '../../Utils/Constants';
 import { motion } from 'framer-motion';
+import { Mail, Phone } from 'lucide-react';
 
 
 
@@ -81,7 +82,20 @@ const Contact = () => {
 
       <div id="contact-form" className='relative bg-[var(--bg-light)] flex justify-center items-center md:top-0'>
         <div className='relative md:-top-40 md:left-20 flex flex-col md:items-center md:flex-row'>
-          <div className='md:absolute md:-left-40 md:w-[24vw] md:h-[calc(65vh-80px)] bg-[var(--hero-bg)] shadow-xl'></div>
+          <div className='md:absolute md:-left-40 md:w-[24vw] md:h-[calc(65vh-80px)] bg-[var(--hero-bg)] shadow-xl p-7 flex flex-col gap-10'>
+            <h1 className='text-[#FFEEDB] font-semibold text-2xl'>Contact us</h1>
+            <div className='flex flex-col gap-3 text-[#F0EBE5]'>
+              <a href="mailto:killuosdevs@gmail.com" className='flex gap-3'>
+                <Mail className='w-5' />
+                killuosdevs@gmail.com
+              </a>
+              <a href="tel:+923210004114" className='flex gap-3'>
+                <Phone className='w-5' />
+                +923210004114
+              </a>
+            </div>
+          </div>
+
           <div className='md:w-[65vw] md:h-[65vh] bg-white shadow-2xl flex flex-col md:flex-row md:pl-[calc(24vw-10rem+30px)] md:pr-32 md:py-[40px]'>
             <div className='text-[var(--hero-bg)] w-screen md:w-full flex flex-col gap-12 relative p-10'>
               <h1 className='text-2xl font-bold text-center md:text-left'>Contact us</h1>
@@ -90,7 +104,7 @@ const Contact = () => {
                   <input type="text" placeholder='Enter your Name' value={ sender_name } onChange={ e => setName( e.target.value ) } className={ inputClassName + " flex-1" } />
                   <input type="text" placeholder='Enter your Email' value={ sender_email } onChange={ e => setEmail( e.target.value ) } className={ inputClassName + " flex-1" } />
                 </div>
-                <textarea type="text" placeholder='Enter Message...' value={ message } onChange={ e => setMsg( e.target.value ) } className={ inputClassName + " max-h-[calc(100%-160px)_!important] min-h-[30px]" } />
+                <textarea type="text" placeholder='Enter Message...' value={ message } onChange={ e => setMsg( e.target.value ) } className={ inputClassName + " !max-h-[calc(100%-160px)] !min-h-[30px]" } />
 
               </div>
               <button disabled={ sending } onClick={ handleSubmit } className='md:absolute md:bottom-0 rounded md:w-24 px-3 py-[6px] border-none outline-none bg-[var(--button-bg)] text-white transition-all hover:scale-[1.03] hover:shadow-xl'>Send</button>
