@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceCard from '../../Components/ServiceCard/ServiceCard';
+import ServiceCard from '../../Components/ServiceCard';
 import { services } from '../../Utils/Constants';
 import { motion } from 'framer-motion';
 
