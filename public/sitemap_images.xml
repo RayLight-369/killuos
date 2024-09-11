@@ -16,6 +16,9 @@
       <image:image>
          <image:loc>https://killuos.vercel.app/Imgs/killogo.png</image:loc>
       </image:image>
+      <image:image>
+         <image:loc>https://killuos.vercel.app/Imgs/ogimg.png</image:loc>
+      </image:image>
       
       <lastmod>2024-09-11</lastmod>
       <changefreq>monthly</changefreq>
@@ -25,6 +28,9 @@
       <loc>rayfolio.me</loc>
       <image:image>
          <image:loc>https://killuos.vercel.app/Imgs/killogo.png</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://killuos.vercel.app/Imgs/ogimg.png</image:loc>
       </image:image>
       
       <lastmod>2024-09-11</lastmod>
