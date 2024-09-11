@@ -51,7 +51,7 @@ const Header = () => {
           </div>
           <div className='flex gap-4 md:gap-10 items-center'>
             { NavLinks.map( ( route, key ) => (
-              <a href={ route.path } key={ key } className={ `${ pathName.includes( route.path ) ? "active-link text-[var(--active-link-color)_!important] after:scale-x-100" : "text-white after:scale-x-0" }  text-[13px] relative p-1 origin-left transition after:content-[''] after:absolute after:w-full after:h-[1px] after:rounded-[3px] after:bg-[var(--active-link-color)] after:bottom-[1px] after:left-0 after:origin-right after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:text-[var(--active-link-color)] hover:after:origin-left hover:after:scale-x-100` }>
+              <a href={ route.path } key={ key } className={ `text-white text-[13px] relative p-1 origin-left transition after:content-[''] after:absolute after:w-full after:h-[1px] after:rounded-[3px] after:bg-[var(--active-link-color)] after:bottom-[1px] after:left-0 after:origin-right after:scale-x-0 after:transition-transform after:duration-200 after:ease-in-out hover:text-[var(--active-link-color)] hover:after:origin-left hover:after:scale-x-100` }>
                 { route.name }
               </a>
             ) ) }

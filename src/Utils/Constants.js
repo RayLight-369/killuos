@@ -3,7 +3,7 @@
 export const NavLinks = [
   {
     name: "Home",
-    path: "/"
+    path: "/#"
   }, {
     name: "Contact",
     path: "/#contact"
