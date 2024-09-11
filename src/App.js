@@ -25,8 +25,8 @@ function Root () {
         <Routes location={ location } key={ location.pathname }>
           <Route path="/" element={ <Header /> }>
             <Route path="/" index element={ <Home /> } />
-            <Route path="contact" element={ <Contact /> } />
-            <Route path="services" element={ <Services /> } />
+            {/* <Route path="contact" element={ <Contact /> } />
+            <Route path="services" element={ <Services /> } /> */}
           </Route>
           <Route path="layout" element={ <Layout /> } />
         </Routes>

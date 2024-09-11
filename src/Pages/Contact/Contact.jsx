@@ -68,7 +68,8 @@ const Contact = () => {
 
 
   return (
-    <motion.section id="contact" className='font-[WorkSans] w-screen h-fit text-white' variants={ variants } initial="initial" animate="animate" exit="exit">
+    <motion.section id="contact" className='font-[WorkSans] w-screen h-fit text-white relative top-5' variants={ variants } initial="initial" animate="animate" exit="exit">
+      {/* <h1 className='text-center text-4xl font-[800] text-[var(--button-bg)] relative top-20'>Contact us</h1> */ }
       <div id='hero-section' className='md:h-[96vh] gap-5 w-screen bg-[var(--hero-bg)] relative overflow-hidden flex flex-col-reverse md:flex-row items-center px-5 pt-20 pb-14 md:px-16 md:py-0'>
         <div className='text-white relative md:-top-12 w-full md:w-[40%] flex flex-col items-center md:items-start gap-7'>
           <h1 className='text-[1.55rem] text-center md:text-left md:text-[2.75rem] md:leading-[127%] font-[800]'><span className={ `text-[var(--active-link-color)] relative z-[12] inline-block` }>Connect</span> with us Anytime, Anywhere.</h1>

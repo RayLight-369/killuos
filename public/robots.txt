@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /Imgs/
+Allow: /
+Sitemap: https://killuos.vercel.app/sitemap.xml
+Sitemap: https://killuos.vercel.app/sitemap_images.xml

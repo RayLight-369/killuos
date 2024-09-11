@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="attribution w-full text-center text-white">
-        All illustrations used on this site were “Designed by Freepik”
+        All illustrations used on this site were <a href="https://freepik.com" className='underline' target='_blank'>Designed by Freepik</a>
       </p>
     </footer>
   );

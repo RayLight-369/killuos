@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import ServiceCard from '../../Components/ServiceCard';
 import { services } from '../../Utils/Constants';
 import { motion } from 'framer-motion';
+import Contact from '../Contact/Contact';
 // import Styles from "./Home.module.css";
 
 
@@ -39,7 +40,7 @@ const Home = () => {
         ) }
       </div>
 
-      <div className='w-screen h-fit py-9 px-5 md:px-12 relative overflow-x-hidden'>
+      <div className='w-screen h-fit py-9 px-5 md:px-12 relative'>
         <div className='flex flex-col gap-2 relative border-b-2 pb-10 [border-image:linear-gradient(to_right,white,#FFD7A8,white)_1]'>
           <img src="/Imgs/question.svg" className='h-[250px] absolute left-[calc(50%+30px)] -top-3 opacity-80' alt="" />
           <img src="/Imgs/question.svg" className='h-[200px] absolute right-1/2 top-[calc(50%-20px)] opacity-85 rotate-[35deg]' alt="" />
@@ -60,6 +61,8 @@ const Home = () => {
           <ServiceCard key={ i } title={ key } description={ val.desc } tags={ val.tags } img={ val.img } />
         ) ) }
       </div>
+
+      <Contact />
 
     </motion.section>
   );
