@@ -31,7 +31,9 @@ const Home = () => {
         <div className='text-white relative w-full md:w-[40%] flex flex-col items-center md:items-start gap-7'>
           <h1 className='text-[1.55rem] text-center md:text-left md:text-[2.75rem] md:leading-[127%] font-[800]'>Your Success Story Starts with a Great <span className={ `text-[var(--active-link-color)] relative z-[12] after:content-[url(./Assets/Imgs/line.svg)] after:absolute after:scale-[.4] inline-block md:after:scale-100 after:h-9 after:overflow-hidden after:block after:top-[18px] md:after:top-6 after:left-[-49%] md:after:translate-x-0 md:after:left-0 after:z-10` }>Website</span>.</h1>
           <p className='text-center md:text-left text-[.90rem] md:text-[.95rem] text-[#F5F5F5] md:px-[4px]'>We create stunning, results-driven websites that elevate your brand and captivate your audience. Let us transform your vision into a powerful digital experience.</p>
-          <button className='text-left w-[169px] px-8 py-2 bg-[var(--button-bg)] hover:shadow-md overflow-hidden transition-all duration-[250ms] hover:px-5 hover:-skew-y-3 hover:-skew-x-3 rounded-md relative after:transition-all after:duration-200 after:content-["→"] after:absolute after:text-[24px] after:-right-10 after:text-white after:block after:top-1/2 after:-translate-y-1/2 hover:after:right-5'>Get in touch</button>
+          <button className='text-left w-[169px] px-8 py-2 bg-[var(--button-bg)] hover:shadow-md overflow-hidden transition-all duration-[250ms] hover:px-5 hover:-skew-y-3 hover:-skew-x-3 rounded-md relative after:transition-all after:duration-200 after:content-["→"] after:absolute after:text-[24px] after:-right-10 after:text-white after:block after:top-1/2 after:-translate-y-1/2 hover:after:right-5' onClick={ () => {
+            document.getElementById( 'contact' ).scrollIntoView( { behavior: 'smooth' } );
+          } }>Get in touch</button>
         </div>
         { !isMobile ? (
           <img className='absolute h-full object-cover right-14' src="/Imgs/illustration.svg" alt="illustration" />

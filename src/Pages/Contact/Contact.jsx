@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Credentials } from '../../Utils/Constants';
+import { Credentials, SocialLinks } from '../../Utils/Constants';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 
@@ -66,7 +66,6 @@ const Contact = () => {
     }
   };
 
-
   return (
     <motion.section id="contact" className='font-[WorkSans] w-screen h-fit text-white relative top-5' variants={ variants } initial="initial" animate="animate" exit="exit">
       {/* <h1 className='text-center text-4xl font-[800] text-[var(--button-bg)] relative top-20'>Contact us</h1> */ }
@@ -83,13 +82,20 @@ const Contact = () => {
 
       <div id="contact-form" className='relative bg-[var(--bg-light)] flex justify-center items-center md:top-0'>
         <div className='relative md:-top-40 md:left-20 flex flex-col md:items-center md:flex-row'>
-          <div className='md:absolute md:-left-40 md:w-[24vw] md:h-[calc(65vh-80px)] bg-[var(--hero-bg)] shadow-xl p-7 flex flex-col gap-10'>
+          <div className='md:absolute md:-left-40 md:w-[24vw] md:h-[calc(65vh-80px)] bg-[var(--hero-bg)] shadow-xl p-7 flex flex-col gap-10 justify-between'>
             <h1 className='text-[#FFEEDB] font-semibold text-2xl'>Contact us</h1>
             <div className='flex flex-col gap-3 text-[#F0EBE5]'>
               <a href="mailto:killuosdevs@gmail.com" className='flex gap-3'>
                 <Mail className='w-5' />
                 killuosdevs@gmail.com
               </a>
+            </div>
+            <div className="socials flex gap-3">
+              { SocialLinks.map( ( link, i ) => (
+                <a href={ link.url } key={ i }>
+                  { link.icon }
+                </a>
+              ) ) }
             </div>
           </div>
 
