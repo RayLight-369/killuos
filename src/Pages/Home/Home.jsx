@@ -53,7 +53,7 @@ const Home = () => {
               {/* <img src="/Imgs/dots.png" alt="" className='h-full absolute right-[300px] object-cover' /> */ }
               <img src="/Imgs/illustration-2.svg" alt="" className='w-full md:w-auto md:h-full relative md:absolute object-cover' />
             </div>
-            <p className='w-full text-center md:text-left md:w-[45vw] relative block -top-20 text-[19px] text-[#303030] leading-[160%]'>We create custom, high-performing websites that are visually appealing and user-friendly, helping your business stand out and grow online, Below are the services we provide</p>
+            <p className='w-full text-center md:text-left md:w-[45vw] relative block -top-10 md:-top-[7px] text-[19px] text-[#303030] leading-[160%]'>We create custom, high-performing websites that are visually appealing and user-friendly, helping your business stand out and grow online, Below are the services we provide</p>
           </div>
         </div>
       </div>
