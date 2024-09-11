@@ -1,6 +1,3 @@
-import { Facebook } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { SocialLinks } from '../Utils/Constants';
 
 const Footer = () => {

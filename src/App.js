@@ -1,10 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Contact from "./Pages/Contact/Contact";
 import Home from "./Pages/Home/Home";
 import Header from "./Components/Header";
 import { AnimatePresence, MotionConfig } from "framer-motion";
-import Services from "./Pages/Services/Services";
-import Layout from "./Pages/Layout/Layout";
 
 
 function App () {
@@ -28,7 +25,6 @@ function Root () {
             {/* <Route path="contact" element={ <Contact /> } />
             <Route path="services" element={ <Services /> } /> */}
           </Route>
-          <Route path="layout" element={ <Layout /> } />
         </Routes>
       </AnimatePresence>
     </MotionConfig>

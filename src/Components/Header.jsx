@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import { NavLinks } from '../Utils/Constants';
 import Footer from './Footer';
 
