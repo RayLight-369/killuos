@@ -110,7 +110,7 @@ const Contact = () => {
                 <textarea type="text" placeholder='Enter Message...' value={ message } onChange={ e => setMsg( e.target.value ) } className={ inputClassName + " !max-h-[calc(100%-160px)] !min-h-[30px]" } />
 
               </div>
-              <button disabled={ sending } onClick={ handleSubmit } className='md:absolute md:bottom-0 rounded md:w-24 px-3 py-[6px] border-none outline-none bg-[var(--button-bg)] text-white transition-all hover:scale-[1.03] hover:shadow-xl'>Send</button>
+              <button disabled={ sending } onClick={ handleSubmit } className='md:absolute md:bottom-0 rounded md:w-24 px-3 py-[6px] border-none outline-none bg-[var(--button-bg)] text-white transition-all hover:scale-[1.03] hover:shadow-xl'>Send{ sending && "ing..." }</button>
             </div>
           </div>
         </div>

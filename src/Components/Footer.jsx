@@ -8,7 +8,7 @@ const Footer = () => {
   const FooterContent = [
     {
       heading: "Business",
-      links: [ "Home_/", "Services_/#services" ]
+      links: [ "Home_/#", "Services_/#services" ]
     },
     {
       heading: "Privacy Policy",
