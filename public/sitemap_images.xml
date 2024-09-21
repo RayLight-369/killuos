@@ -7,7 +7,7 @@
          <image:loc>https://killuos.vercel.app/Imgs/killogo.png</image:loc>
       </image:image>
       
-      <lastmod>2024-09-11</lastmod>
+      <lastmod>2024-09-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
@@ -20,11 +20,11 @@
          <image:loc>https://killuos.vercel.app/Imgs/ogimg.png</image:loc>
       </image:image>
       
-      <lastmod>2024-09-11</lastmod>
+      <lastmod>2024-09-21</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
-   <url>
+   <!-- <url>
       <loc>killuos.vercel.app</loc>
       <image:image>
          <image:loc>https://killuos.vercel.app/Imgs/killogo.png</image:loc>
@@ -36,6 +36,6 @@
       <lastmod>2024-09-11</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
-   </url>
+   </url> -->
    <!-- Add more URLs for individual portfolio projects, blog posts, etc. -->
 </urlset>
