@@ -24,18 +24,5 @@
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
-   <!-- <url>
-      <loc>killuos.vercel.app</loc>
-      <image:image>
-         <image:loc>https://killuos.vercel.app/Imgs/killogo.png</image:loc>
-      </image:image>
-      <image:image>
-         <image:loc>https://killuos.vercel.app/Imgs/ogimg.png</image:loc>
-      </image:image>
-      
-      <lastmod>2024-09-11</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
-   </url> -->
    <!-- Add more URLs for individual portfolio projects, blog posts, etc. -->
 </urlset>
