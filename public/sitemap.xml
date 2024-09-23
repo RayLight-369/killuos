@@ -4,15 +4,24 @@
    <url>
       <loc>https://www.killuos.studio/</loc>
       <image:image>
+         <image:loc>https://www.killuos.studio/Imgs/icon.ico</image:loc>
+      </image:image>
+      <image:image>
          <image:loc>https://www.killuos.studio/Imgs/killogo.png</image:loc>
       </image:image>
+      <image:image>
+         <image:loc>https://killuos.studio/Imgs/ogimg.png</image:loc>
+      </image:image>
       
-      <lastmod>2024-09-21</lastmod>
+      <lastmod>2024-09-23</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
       <loc>https://killuos.studio</loc>
+      <image:image>
+         <image:loc>https://www.killuos.studio/Imgs/icon.ico</image:loc>
+      </image:image>
       <image:image>
          <image:loc>https://killuos.studio/Imgs/killogo.png</image:loc>
       </image:image>
@@ -20,7 +29,7 @@
          <image:loc>https://killuos.studio/Imgs/ogimg.png</image:loc>
       </image:image>
       
-      <lastmod>2024-09-21</lastmod>
+      <lastmod>2024-09-23</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
